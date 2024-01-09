@@ -24,7 +24,7 @@ console.log("Hi, ich bin " + firstName + " " + familyName);
    JavaScript ist eine untypisierte Sprache"
 */
 
-let test; // Deklaration
+//let test; // Deklaration
 console.log("Datentyp: " + typeof test);
 console.log("Inhalt: " + test);
 console.log("-------------");
@@ -40,4 +40,9 @@ test = true; // boolean
 console.log("Datentyp: " + typeof test);
 console.log("Inhalt: " + test)
 
+/* Variablen vs. Konstanten in JS */
+
+let test;
+test = "hi";
+console.log("Inhalt: " + test);
 
