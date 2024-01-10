@@ -37,8 +37,8 @@ console.log("Die Summer der Zahlen ist: " + summe);
 /*****Variante2*****/
 // Kompaktere Lösung
 let zahl1, zahl2, summe;
-zahl1 = parseFloat(prompt("zahl 1: "));
-zahl2 = parseFloat(prompt("Zahl 2: "));
+zahl1 = parseInt(prompt("zahl 1: "));
+zahl2 = parseInt(prompt("Zahl 2: "));
 summe = zahl1 + zahl2;
 console.log("Die Summe der Zahlen ist: " + summe);
 
