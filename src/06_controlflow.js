@@ -35,7 +35,7 @@ console.log("------------------");
 //    console.log("Mark ist älter!");
 //}
 
-[10:31] Peter Schmidt
+
 /************ IF - ELSE  ************/
 // mit Alternative  
 // entweder ja oder nein
@@ -56,6 +56,22 @@ console.log("------------------");
 /************  Ternäre (ternary) Schreibweise ************/
 // console.log( (isJohnOlder) ? "John is older" : "Mark is older");
 
+/************ IF - ELSE IF  ************/
+// mit alternativen Fällen (älter, jünger, gleich alt)
 
-
+if(isJohnOlder)
+// Ja-Zweig
+{
+    console.log("John ist älter!");
+}
+// alternative Zweige
+else if(isJohnEqual)
+{
+    console.log("John ist gleich alt!");
+}
+// gemeinsame Alternative
+else
+{
+    console.log("John ist jünger!");
+}
 
