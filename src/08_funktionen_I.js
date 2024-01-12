@@ -49,12 +49,56 @@ function ausgabeNamen2(firstName)  /// Parameter
 
 //ausgabeNamenParams("Max","Mütze");
 
-const prompt = require('prompt-sync')({sigint: true});
-ausgabeNamenParams(prompt("Bitte Vornamen eingeben:"),prompt("Ihren Nachnamen bitte eingeben:"));  /// Piping
+//const prompt = require('prompt-sync')({sigint: true});
+//ausgabeNamenParams(prompt("Bitte Vornamen eingeben:"),prompt("Ihren Nachnamen bitte eingeben:"));  /// Piping
 
 function ausgabeNamenParams(firstName, familyName) /// Parameter 
 {
     console.log("Hallo, " + firstName + " " + familyName + "!");
+}
+
+
+/***** Funktionen 03a *****/
+/// 03a. Vorbereitung -Trennen der Funktionalitäten
+/// Postulat: one function = one job (uncle Bob)
+/// SRP single responsibility principle
+
+//ausgabeNamenSRP("Max","Mütze");
+
+function ausgabeNamenSRP(firstName, familyName) /// Parameter 
+{
+    /// 1. Funktionalität: string composing
+    const GAP = " ";
+    let outputStr = "Hallo, " + firstName + GAP + familyName + "!"
+
+    /// 2. Funktionalität: string output
+    console.log(outputStr);
+}
+
+
+/***** Funktion 03b *****/
+
+/// 1. Funktionalität: string composing
+
+output(getString("Max", "Mütze"))
+
+function getString(firstName, familyName) 
+{
+    const GAP = " ";
+    let outputStr = "Hallo, " + firstName + GAP + familyName + "!"
+    return outputStr;  /// return schickt die Daten an den call (Ausgabe der Daten)
+}
+
+
+/// 2. Funktionalität: string output
+
+//output("hi");
+//output("2");
+//output("true");
+
+function output(outputData) 
+{
+    console.log(outputData);
 }
 
 
