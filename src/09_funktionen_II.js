@@ -19,13 +19,12 @@ output(divide(3,0));
 
 function divide(a,b) 
 {
-	if (b !== 0)  /// b ungleich 0
-	{
-		return a / b; /// Reguläres Verhalten
-	} else 
+	if (b == 0) 
 	{
 		return ERROR_STR_DIV;  /// Ausnahme
 	}
+	
+		return a / b; /// Reguläres Verhalten
 	
 }
 
