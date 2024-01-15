@@ -10,18 +10,43 @@
 4. Ausgabe in Konsole : check!
 */
 
-
+const prompt = require('prompt-sync')({sigint: true});
 const ERROR_STR_DIV = "Division durch 0 ist nicht möglich!";
 const ERROR_STR_GEN = "Irgendwas ging schief!";
+
+startApp();
+function startApp() 
+{
+	output(calculator(getNum1(),getNum2(),getOp()));
+}
+
+function getNum1() 
+{
+	return parseInt(prompt("Zahl1?: "));
+}
+
+function getNum2() 
+{
+	return parseInt(prompt("Zahl2?: "));
+}
+
+function getOp() 
+{
+	return prompt("Operator?: ");
+}
+
+
+
+
 // module: calculator | tests:
 // agreement : "+","-","*",":","/"
-output(calculator(3,2,"+"));
-output(calculator(3,2,"-"));
-output(calculator(3,2,"*"));
-output(calculator(3,2,":"));
-output(calculator(3,2,"/"));
-output(calculator(3,0,"/"));
-output(calculator(3,2,"#?!"));
+//output(calculator(3,2,"+"));
+//output(calculator(3,2,"-"));
+//output(calculator(3,2,"*"));
+//output(calculator(3,2,":"));
+//output(calculator(3,2,"/"));
+//output(calculator(3,0,"/"));
+//output(calculator(3,2,"#?!"));
 
 function calculator(a,b,op) 
 {
@@ -40,6 +65,9 @@ function calculator(a,b,op)
 		    return ERROR_STR_GEN;
 	}
 }
+
+
+/***** Grunrechenarten *****/
 
 /// module: divison a / b // test:
 //output(divide(4,2));
