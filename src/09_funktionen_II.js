@@ -12,11 +12,19 @@
 
 
 /// module: divison a / b // test:
-//output(divide(4,2));
+output(divide(4,2));
+output(divide(3,0));
 
 function divide(a,b) 
 {
-	return a / b;
+	if (b !== 0)  /// b ungleich 0
+	{
+		return a / b;
+	} else 
+	{
+		return "Division durch Null ist nicht definiert";
+	}
+	
 }
 
 
