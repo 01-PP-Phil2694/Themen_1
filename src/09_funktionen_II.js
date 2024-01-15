@@ -11,6 +11,8 @@
 */
 
 
+const ERROR_STR_DIV = "Division durch 0 ist nicht möglich!";
+
 /// module: divison a / b // test:
 output(divide(4,2));
 output(divide(3,0));
@@ -19,10 +21,10 @@ function divide(a,b)
 {
 	if (b !== 0)  /// b ungleich 0
 	{
-		return a / b;
+		return a / b; /// Reguläres Verhalten
 	} else 
 	{
-		return "Division durch Null ist nicht definiert";
+		return ERROR_STR_DIV;  /// Ausnahme
 	}
 	
 }
