@@ -10,6 +10,16 @@
 4. Ausgabe in Konsole : check!
 */
 
+
+/// module: divison a / b // test:
+//output(divide(4,2));
+
+function divide(a,b) 
+{
+	return a / b;
+}
+
+
 /// module multiplication a * b / test:
 //output(multiply(3,2));
 
