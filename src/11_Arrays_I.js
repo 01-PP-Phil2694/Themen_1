@@ -57,19 +57,37 @@
       hier: Aufsummierung
 **/
 
-/* Zu "Fuß" - DRY !!! */
- let a = 0; // Anfangswert
- output("inhalt von a: " + a);
- a = a + 1; // a = 0 + 1
- output("inhalt von a: " + a);
- a = a + 1; // a = 1 + 1
- output("inhalt von a: " + a);
- a = a + 1; // a = 2 + 1
- output("inhalt von a: " + a);
+/* Zu "Fuß" - DRY !!! = Dont Repeat Yourself */
+// let a = 0; // Anfangswert
+// output("inhalt von a: " + a);
+// a = a + 1; // a = 0 + 1
+// output("inhalt von a: " + a);
+// a = a + 1; // a = 1 + 1
+// output("inhalt von a: " + a);
+// a = a + 1; // a = 2 + 1
+// output("inhalt von a: " + a);
+
+/* Besser: mit For-Schleife */
+//let a = 0 /// Anfangswert
+//for (let i = 0; i < 10; i++) 
+//{   
+//    a+= 1; /// a = a + 1
+//    output("inhalt von a: " + a);  
+//}
 
 
+/*
+1a. Einer Variablen kann Ihr eigener Wert zugewiesen werden
+Solange die Variable existiert, bleibt dieser erhalten
+hier: Verkettung eines Strings // Transponierung
+*/
 
-
+//let str = ""; /// Anfangswert
+//for (let i = 0; i < 10; i++) 
+//{   
+//    str += "Test" + " "; /// a = a + 1
+//    output(str);
+//}
 
 
 
@@ -130,19 +148,20 @@ function getSentenceArr(arr)
 /// Transponierung:  untereinander ---> nebeneinander
 /// Helge Schneider: Anananandereihung ...
 
-//output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
+output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
 function getSentenceArr2(arr)
 {
     const GAP = " ";
     const PUNCT = ".";
-    let str;  
+    let str = ""; /// Anfangswert
 
+    
     for (let i = 0; i < arr.length; i++) 
-    {
-    output(arr[i]);
+    {   
+    str += arr[i] + GAP;
     }
 
-    return str; 
+    return str + PUNCT;
 
 }
 
