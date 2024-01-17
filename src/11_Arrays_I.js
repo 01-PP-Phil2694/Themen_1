@@ -148,7 +148,7 @@ function getSentenceArr(arr)
 /// Transponierung:  untereinander ---> nebeneinander
 /// Helge Schneider: Anananandereihung ...
 
-output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
+//output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
 function getSentenceArr2(arr)
 {
     const GAP = " ";
@@ -167,12 +167,27 @@ function getSentenceArr2(arr)
         }
     }
     return str;
+
+    /// 2. Variante: Struktur erzeugen + trimmen!
+    //for (let i = 0; i < arr.length; i++) 
+    //{
+    //    str += arr[i] + GAP;   
+    //}
+    //return str.trim() + PUNCT;
+
+
+    /// 3. Variante: Ausnutzen von generischen Funktionen
+    //return arr.join(GAP) + PUNCT;
+
+
+
+
 }
 
 
 /// Modul: Ausgabe in Konsole: Test...
-//function output(outputStr) 
-//{
-//    
-//}
+function output(outputStr) 
+{
+    
+}
 
